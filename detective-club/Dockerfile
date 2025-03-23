@@ -15,6 +15,6 @@ WORKDIR /app
 
 COPY --from=builder /app .
 
-EXPOSE 80
+EXPOSE 4000
 
 ENTRYPOINT [ "./detective-club" ]
