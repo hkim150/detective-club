@@ -1,5 +1,5 @@
 const isDev = window.location.hostname === "localhost";
-const wsPath = "ws://" + window.location.hostname + "/detective-club/ws"
+const wsPath = isDev ? "ws://localhost:2000/detective-club/ws" : "wss://" + window.location.hostname + "/detective-club/ws"
 const socket = new WebSocket(wsPath);
 
 const activePlayerBtn = document.getElementById("active-player-btn");
