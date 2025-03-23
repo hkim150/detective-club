@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
 
 RUN go mod download
-RUN go build -o itselector .
+RUN go build -o detective-club .
 
 # runtime image
 FROM alpine:latest
@@ -17,4 +17,4 @@ COPY --from=builder /app .
 
 EXPOSE 80
 
-ENTRYPOINT [ "./itselector" ]
+ENTRYPOINT [ "./detective-club" ]
